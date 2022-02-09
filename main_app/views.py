@@ -64,24 +64,3 @@ class ArtistDelete(DeleteView):
     success_url = '/artists/'
 
 
-#class Song:
-    #def __init__(self, name, img):
-     #   self.name = name
-      #  self.img = img
-
-
-#songs = [
- #   Song('Song 1', 'https://online.berklee.edu/takenote/wp-content/uploads/2019/03/killerHooks-1920x1200.png'),
-  #  Song('Song 2', 'https://27mi124bz6zg1hqy6n192jkb-wpengine.netdna-ssl.com/wp-content/uploads/2019/10/Our-Top-10-Songs-About-School-768x569.png'),
-   # Song('Song 3', 'https://static01.nyt.com/images/2020/03/19/smarter-living/00well-handwashing-psa-music-notes/00well-handwashing-psa-music-notes-articleLarge-v3.gif?quality=75&auto=webp&disable=upscale'),
-    #Song('Different Song', 'https://www.legalzoom.com/sites/lz.com/files/inline-images/xwoman-blue-dress-playing-blue-guitar.jpg.pagespeed.ic.oksHaDquuG.jpg'),
-    #Song('Last Song', 'https://www.phoenixfm.com/wp-content/uploads/2019/10/song.png')
-]
-
-#class SongList(TemplateView):
- #   template_name = 'song_list.html'
-
-  #  def get_context_data(self, **kwargs):
-   #     context = super().get_context_data(**kwargs)
-    #    context['songs'] = songs
-     #   return context

@@ -1,4 +1,5 @@
 from django.db import models
+import time
 
 # Create your models here.
 
@@ -25,3 +26,6 @@ class Song(models.Model):
 
     def __str__(self):
         return self.title
+
+    def get_length(self):
+        return time.strftime('%M:%S', time.gmtime(self.length))
