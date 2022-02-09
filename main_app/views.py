@@ -1,11 +1,11 @@
-from django.shortcuts import render
+from django.shortcuts import redirect
 from django.views import View 
 from django.urls import reverse
 from django.http import HttpResponse
 from django.views.generic.base import TemplateView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic import DetailView
-from .models import Artist
+from .models import Artist, Song
 
 # Create your views here.
 
@@ -64,3 +64,12 @@ class ArtistDelete(DeleteView):
     success_url = '/artists/'
 
 
+
+
+class SongCreate(View):
+    def post(self, request, pk):
+        title = request.POST.get('title')
+        length = request.POST.get('length')
+        artist = Artist.objects.get(pk=pk)
+        Song.objects.create(title=title, length=length, artist=artist)
+        return redirect('artist_detail', pk=pk)
