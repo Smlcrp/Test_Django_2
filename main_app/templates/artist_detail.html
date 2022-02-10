@@ -56,13 +56,14 @@
                 </div>
             </div>
         </form>
-        
+
         {% for song in artist.songs.all %}
         <div class="song">
           <span>{{forloop.counter}}</span>
           <span><b>{{song.title}}</b></span>
           <span>{{song.get_length}}</span>
         </div>
+        
             {% empty %}
         <article class="message">
           <div class="message-header">

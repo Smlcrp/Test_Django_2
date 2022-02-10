@@ -52,6 +52,11 @@ class ArtistDetail(DetailView):
     model = Artist
     template_name = 'artist_detail.html'
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['playlists'] = Playlist.objects.all()
+        return context
+
 
 
 class ArtistUpdate(UpdateView):
